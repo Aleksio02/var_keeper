@@ -27,6 +27,7 @@ jobs:
         run: python3 ./src/app/app.py &
       - name: Test GET-request
         run: |
+          echo $curl http://127.0.0.1:5000/
           ANSW=$(curl http://127.0.0.1:5000/)
           echo $ANSW
           if [ "$ANSW" != "Hello, World!" ]; then
