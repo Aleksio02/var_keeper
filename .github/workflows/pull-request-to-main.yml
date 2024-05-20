@@ -28,6 +28,7 @@ jobs:
       - name: Test GET-request
         run: |
           ANSW=$(curl http://127.0.0.1:5000/)
+          echo $ANSW
           if [ "$ANSW" != "Hello, World!" ]; then
           exit 1
           else
